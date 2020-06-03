@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sources/Sprites/Overworld/Overworld.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 1 )
+
+[node name="OverworldTileSetTest" type="TileMap"]
+format = 1
+
+[node name="Grass" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="brCornerFence" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 288, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="brCornerFence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brCornerFence/StaticBody2D"]
+position = Vector2( 0, 6 )
+shape = SubResource( 2 )
+
+[node name="blCornerFence" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 288, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="blCornerFence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blCornerFence/StaticBody2D"]
+position = Vector2( 0, 6 )
+shape = SubResource( 2 )
+
+[node name="midFence" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 272, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="midFence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="midFence/StaticBody2D"]
+position = Vector2( 0, 6 )
+shape = SubResource( 2 )
