@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/UI/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Themes/HoverText.tres" type="Theme" id=2]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 904.0
+margin_bottom = 520.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 390.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_right = 390.0
+margin_bottom = 14.0
+text = "We Mighty Few"
+
+[node name="MenuOptions" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 390.0
+margin_bottom = 405.0
+size_flags_vertical = 3
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Continue" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 113.0
+margin_right = 390.0
+margin_bottom = 135.0
+focus_mode = 2
+mouse_filter = 1
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Continue"
+
+[node name="NewGame" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 165.0
+margin_right = 390.0
+margin_bottom = 179.0
+mouse_filter = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "New Game"
+
+[node name="Options" type="Label" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 209.0
+margin_right = 390.0
+margin_bottom = 223.0
+mouse_filter = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Options"
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
+margin_top = 253.0
+margin_right = 390.0
+margin_bottom = 273.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Continue"
+flat = true
+align = 0
+
+[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 409.0
+margin_right = 390.0
+margin_bottom = 440.0
+text = "ver. pre-alpha 0.0.01
+MindRaker Games"
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+margin_left = 394.0
+margin_right = 784.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Charaters" type="Label" parent="HBoxContainer/CenterContainer"]
+margin_left = 195.0
+margin_top = 213.0
+margin_right = 195.0
+margin_bottom = 227.0
+[connection signal="mouse_entered" from="HBoxContainer/VBoxContainer/MenuOptions/Continue" to="." method="_on_Continue_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/VBoxContainer/MenuOptions/Continue" to="." method="_on_Continue_mouse_exited"]

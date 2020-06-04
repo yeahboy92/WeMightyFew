@@ -27,15 +27,15 @@ animations = [ {
 "name": "walkDown",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "walkRight",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "walkUp",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walkRight",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
