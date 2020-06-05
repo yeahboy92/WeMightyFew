@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sources/Sprites/Player01/jumpRight2.png" type="Texture" id=1]
+[ext_resource path="res://Sources/Sprites/Player01/walkRight2.png" type="Texture" id=2]
+[ext_resource path="res://Sources/Sprites/Player01/walkRight0.png" type="Texture" id=3]
+[ext_resource path="res://Sources/Sprites/Player01/jumpRight1.png" type="Texture" id=4]
+[ext_resource path="res://Sources/Sprites/Player01/jumpRight0.png" type="Texture" id=5]
+[ext_resource path="res://Sources/Sprites/Player01/walkRight3.png" type="Texture" id=6]
+[ext_resource path="res://Sources/Sprites/Player01/walkRight1.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "jumpRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walkRight",
+"speed": 5.0
+} ]
+
+[node name="Player01_ss" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walkRight"
