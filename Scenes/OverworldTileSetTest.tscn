@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Sources/Sprites/Overworld/Overworld.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.2819, 7.96118 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 1 )
 
 [node name="OverworldTileSetTest" type="TileMap"]
@@ -24,7 +24,7 @@ region_rect = Rect2( 48, 80, 48, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Log"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Log/StaticBody2D"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="brCornerFence" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -35,7 +35,7 @@ region_rect = Rect2( 48, 288, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="brCornerFence/StaticBody2D"]
 position = Vector2( 0, 6 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="blCornerFence" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -46,7 +46,7 @@ region_rect = Rect2( 32, 288, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blCornerFence/StaticBody2D"]
 position = Vector2( 0, 6 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="midFence" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -57,4 +57,4 @@ region_rect = Rect2( 64, 272, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="midFence/StaticBody2D"]
 position = Vector2( 0, 6 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
