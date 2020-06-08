@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -14,3 +14,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func _physics_process(_delta):
+	
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if body.name == "Player01":
+			get_tree().reload_current_scene()

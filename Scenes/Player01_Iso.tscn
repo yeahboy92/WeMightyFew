@@ -22,9 +22,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "walkDown",
+"name": "walkRight",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 16 ) ],
@@ -32,9 +32,9 @@ animations = [ {
 "name": "walkUp",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walkRight",
+"name": "walkDown",
 "speed": 10.0
 } ]
 

@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TileSets/testSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player01_ss.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/resetLevel.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1232.77, 36.2106 )
 
 [node name="sideScrollTest" type="Node2D"]
 
@@ -10,7 +14,14 @@ scale = Vector2( 4, 4 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 327692, 5, 0, 393216, 5, 0, 458759, 5, 0 )
+tile_data = PoolIntArray( 393211, 5, 0, 393216, 5, 0, 393228, 5, 0, 458759, 5, 0 )
 
 [node name="Player01_ss" parent="." instance=ExtResource( 2 )]
 position = Vector2( 63.3082, 341.82 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 14.2872, 604.536 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
