@@ -35,7 +35,7 @@ func _physics_process(delta):
 		
 	# adds y motion to player
 	
-	if Input.is_action_just_pressed("ui_jump") && is_on_floor():
+	if Input.is_action_pressed("ui_jump") && is_on_floor():
 		motion.y = -jumpHeight
 		isMovingY = true
 		$AnimatedSprite.play("jumpRight")

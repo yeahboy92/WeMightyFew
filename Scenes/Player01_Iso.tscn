@@ -15,7 +15,7 @@
 [ext_resource path="res://Sources/Sprites/Player01/walkUp3.png" type="Texture" id=16]
 [ext_resource path="res://Sources/Sprites/Player01/walkDown2.png" type="Texture" id=17]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 14 ) ],
 "loop": true,
@@ -50,12 +50,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Camera2D" type="Camera2D" parent="Player01"]
-current = true
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player01"]
 scale = Vector2( 4, 4 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "idle"
 __meta__ = {
 "_edit_group_": true
