@@ -16,8 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="WeMightyFew"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/WeMightyFew.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GLOBAL="*res://Scripts/Global.gd"
+PlayerStats="*res://Scripts/Player01/Player_Stats.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 

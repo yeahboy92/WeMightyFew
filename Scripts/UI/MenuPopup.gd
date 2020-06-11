@@ -62,7 +62,7 @@ func _input(event):
 					hide()
 				1:
 					# Restart game
-					get_tree().reload_current_scene()
+					GLOBAL.reload_current_scene()
 					get_tree().paused = false
 				2:
 					# Quit game

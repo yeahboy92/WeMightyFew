@@ -1,4 +1,4 @@
-extends Area2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -8,15 +8,13 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var scene_instance = GLOBAL.scene_1.instance()
+	scene_instance
+	#(OS.get_real_window_size()/2)
+	add_child(scene_instance)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _physics_process(_delta):
-	
-	var bodies = get_overlapping_bodies()
-	for body in bodies:
-		if body.name == "Player01":
-			GLOBAL.reload_current_scene()
