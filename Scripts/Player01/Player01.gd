@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-var speed = 200
+var speed = 300
 var facing = 0
 var isMovingX = false
 var isMovingY = false
@@ -13,13 +13,15 @@ func _physics_process(delta):
 		motion.x = speed
 		isMovingX = true
 		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play("walkRight")
+		if not isMovingY:
+			$AnimatedSprite.play("walkRight")
 		
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -speed
 		isMovingX = true
 		$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play("walkRight")
+		if not isMovingY:
+			$AnimatedSprite.play("walkRight")
 		
 	else:
 		motion.x = 0

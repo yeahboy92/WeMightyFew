@@ -1,10 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/levelChange.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player01_Iso.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Characters/Player/Player01_Iso.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileSets/testSet.tres" type="TileSet" id=3]
 [ext_resource path="res://fonts/droid-sans/DroidSans.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scripts/UI/MenuPopup.gd" type="Script" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29.1505, 10 )

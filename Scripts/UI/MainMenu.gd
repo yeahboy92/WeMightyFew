@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_NewGameButton_pressed():
-	GLOBAL.goto_scene("res://Scenes/TestLevelOne.tscn")
+	GLOBAL.goto_scene("res://Scenes/levels/TestLevelOne.tscn")
 	pass # Replace with function body.

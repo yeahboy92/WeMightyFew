@@ -4,7 +4,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var scene_1 = preload("res://Scenes/MainMenu.tscn")
+onready var scene_1 = preload("res://Scenes/UI/MainMenu.tscn")
 var current_scene = null
 
 func _ready():

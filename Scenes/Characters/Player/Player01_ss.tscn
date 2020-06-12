@@ -17,9 +17,9 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 1 ) ],
-"loop": true,
+"loop": false,
 "name": "jumpRight",
-"speed": 5.0
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]

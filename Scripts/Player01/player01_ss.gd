@@ -14,19 +14,24 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		motion.y += GRAVITY
+		
+	if is_on_floor():
+		isMovingY = false
 	
 	# adds x motion to player
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
 		isMovingX = true
 		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play("walkRight")
+		if is_on_floor():
+			$AnimatedSprite.play("walkRight")
 		
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -speed
 		isMovingX = true
 		$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play("walkRight")
+		if is_on_floor():
+			$AnimatedSprite.play("walkRight")
 		
 	else:
 		motion.x = 0
@@ -41,7 +46,8 @@ func _physics_process(delta):
 		$AnimatedSprite.play("jumpRight")
 		
 	
-	if isMovingX == false:
+	if isMovingX == false and isMovingY == false:
+		$AnimatedSprite.play("walkRight")
 		$AnimatedSprite.stop()
 		$AnimatedSprite.set_frame(0)
 	

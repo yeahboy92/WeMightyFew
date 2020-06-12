@@ -9,7 +9,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var scene_instance = GLOBAL.scene_1.instance()
-	scene_instance
 	#(OS.get_real_window_size()/2)
 	add_child(scene_instance)
 	pass # Replace with function body.
