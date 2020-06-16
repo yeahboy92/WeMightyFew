@@ -76,6 +76,7 @@ __meta__ = {
 }
 
 [node name="AccountantButton" type="TextureButton" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+modulate = Color( 1, 0.937255, 0, 1 )
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
@@ -107,6 +108,7 @@ __meta__ = {
 }
 
 [node name="ITButton" type="TextureButton" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+modulate = Color( 0.215686, 0.2, 1, 1 )
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
@@ -138,6 +140,7 @@ __meta__ = {
 }
 
 [node name="HRButton" type="TextureButton" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer4"]
+modulate = Color( 0, 1, 0, 1 )
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
@@ -169,6 +172,7 @@ __meta__ = {
 }
 
 [node name="MaintenanceButton" type="TextureButton" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+modulate = Color( 1, 0, 0, 1 )
 margin_right = 209.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
@@ -190,6 +194,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AccountantButton" to="." method="_on_AccountantButton_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer3/ITButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer4/HRButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer5/MaintenanceButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer3/ITButton" to="." method="_on_ITButton_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer4/HRButton" to="." method="_on_HRButton_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer5/MaintenanceButton" to="." method="_on_MaintenanceButton_pressed"]
