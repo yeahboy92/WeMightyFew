@@ -10,7 +10,7 @@ var UP = Vector2(0, -1)
 
 var GRAVITY = 30
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	if not is_on_floor():
 		motion.y += GRAVITY

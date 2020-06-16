@@ -6,7 +6,7 @@ var facing = 0
 var isMovingX = false
 var isMovingY = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	# adds x motion to player
 	if Input.is_action_pressed("ui_right"):

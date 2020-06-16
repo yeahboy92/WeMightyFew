@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -16,6 +16,12 @@ func _ready():
 #	pass
 
 
-func _on_NewGameButton_pressed():
-	GLOBAL.goto_scene("res://Scenes/UI/ClassSelection.tscn")
+func _on_TextureButton_pressed():
+	GLOBAL.goto_scene("res://Scenes/levels/TestLevelOne.tscn")
+	pass # Replace with function body.
+
+
+func _on_AccountantButton_pressed():
+	PlayerStats.set_p_class(0)
+	GLOBAL.goto_scene("res://Scenes/levels/TestLevelOne.tscn")
 	pass # Replace with function body.

@@ -30,7 +30,7 @@ func change_menu_color():
 			
 
 
-func _input(event):
+func _input(_event):
 	if not visible:
 		if Input.is_action_just_pressed("menu"):
 			# Pause game
