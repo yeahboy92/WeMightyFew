@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Player01/Player01.gd" type="Script" id=1]
 [ext_resource path="res://Sources/Sprites/Player01/walkLeft0.png" type="Texture" id=2]
 [ext_resource path="res://Sources/Sprites/Player01/walkDown0.png" type="Texture" id=3]
 [ext_resource path="res://Sources/Sprites/Player01/walkUp1.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Player01/Player01_Iso.gd" type="Script" id=5]
 [ext_resource path="res://Sources/Sprites/Player01/walkRight1.png" type="Texture" id=7]
 [ext_resource path="res://Sources/Sprites/Player01/walkRight3.png" type="Texture" id=9]
 [ext_resource path="res://Sources/Sprites/Player01/walkUp0.png" type="Texture" id=10]
@@ -43,6 +44,7 @@ radius = 20.0
 height = 26.0
 
 [node name="Player01_Iso" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Player01" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
@@ -64,5 +66,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Camera2D" type="Camera2D" parent="Player01"]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
 current = true

@@ -6,6 +6,7 @@ var facing = 0
 var isMovingX = false
 var isMovingY = false
 
+
 func _physics_process(_delta):
 	
 	# adds x motion to player
@@ -50,3 +51,4 @@ func _physics_process(_delta):
 	motion = move_and_slide(motion)
 
 	pass
+	
