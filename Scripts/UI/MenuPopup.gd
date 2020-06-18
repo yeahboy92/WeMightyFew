@@ -52,7 +52,7 @@ func _input(_event):
 			else:
 				selected_menu = 2
 			change_menu_color()
-		elif Input.is_action_just_pressed("ui_accept"):
+		elif Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("mouse_click"):
 			match selected_menu:
 				0:
 					# Resume game
@@ -70,3 +70,21 @@ func _input(_event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Resume_mouse_entered():
+	selected_menu = 0
+	change_menu_color()
+	pass # Replace with function body.
+
+
+func _on_Restart_mouse_entered():
+	selected_menu = 1
+	change_menu_color()
+	pass # Replace with function body.
+
+
+func _on_Quit_mouse_entered():
+	selected_menu = 2
+	change_menu_color()
+	pass # Replace with function body.

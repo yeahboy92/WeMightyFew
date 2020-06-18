@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/droid-sans/DroidSans.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/UI/MenuPopup.gd" type="Script" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="MenuPopup" type="Popup" parent="."]
+pause_mode = 2
+visible = true
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 100.0
+popup_exclusive = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MenuPopup"]
+margin_left = 2.0
+margin_right = 802.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 200, 100 )
+color = Color( 0.313726, 0.313726, 0.313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="ColorRect" parent="MenuPopup"]
+margin_left = 70.0
+margin_top = 40.0
+margin_right = 730.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 180, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuPopup/Resume"]
+margin_right = 660.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Resume"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="ColorRect" parent="MenuPopup"]
+margin_left = 70.0
+margin_top = 120.0
+margin_right = 730.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuPopup/Restart"]
+margin_right = 660.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Restart"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="ColorRect" parent="MenuPopup"]
+margin_left = 70.0
+margin_top = 200.0
+margin_right = 730.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 180, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuPopup/Quit"]
+margin_right = 660.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="MenuPopup/Resume" to="MenuPopup" method="_on_Resume_mouse_entered"]
+[connection signal="mouse_entered" from="MenuPopup/Restart" to="MenuPopup" method="_on_Restart_mouse_entered"]
+[connection signal="mouse_entered" from="MenuPopup/Quit" to="MenuPopup" method="_on_Quit_mouse_entered"]
